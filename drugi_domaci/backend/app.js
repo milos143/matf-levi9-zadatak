@@ -21,10 +21,10 @@ books.set(6, { title: 'Plodovi zemlje', author: 'Knut Hamsun'});
 
 // Converting map books to JSON format 
 function createJSONData() {
-    let all_data = {}
+    let all_data = {};
 
     for (const [key, value] of books)
-        data[key] = value
+        all_data[key] = value;
 
     return all_data;
 }
@@ -32,7 +32,7 @@ function createJSONData() {
 // Displaying all books in json format
 app.get('/admin/proizvodi', (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.send(createJSONData())
+    res.send(createJSONData());
 })
 
 // Adding new book in map
