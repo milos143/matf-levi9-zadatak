@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import {Route, BrowserRouter} from 'react-router-dom'
 
 import App from './App'
-import ItemAdd from './noviProizvod'
-import ItemsPreview from './sviProizvodi'
+import ItemAdd from './novaKnjiga'
+import ItemsPreview from './sveKnjige'
 
 ReactDOM.render(
   <BrowserRouter>

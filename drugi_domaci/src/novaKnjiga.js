@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import { NavLink } from 'react-router-dom'
 
-//dodati css
-//import './novaKnjiga.css';
+import './novaKnjiga.css';
 
-export default class noviProizvod extends Component {
+export default class novaKnjiga extends Component {
     
     constructor(props) {
         super(props);
@@ -70,9 +69,10 @@ export default class noviProizvod extends Component {
 
     render() {
         return (
-          
+          <div class="sve">
+            <h1>Unos nove knjige</h1>
             <form>
-              <div id="novaKnjiga">
+              <div id="sve">
 
                 <label> Naslov </label>
                 <input type="text" id="titleNovogProizvoda" onChange={ this.unesititle } placeholder="Naslov..." required></input>
@@ -81,16 +81,17 @@ export default class noviProizvod extends Component {
                 <label> Autor </label>
                 <input type="text" id="authorNovogProizvoda" onChange={ this.unesiauthor } placeholder="Autor..." required></input>
 
-                <button type="submit" id = "unosProizvoda" onClick={this.unesiProizvod}>
+                <button class="button button1" type="submit" id = "unosProizvoda" onClick={this.unesiProizvod}>
                   DODAJ NOVU KNJIGU
                 </button>
 
                 <p> </p>
-                <NavLink
-                    to="/"> POČETNA
+                <NavLink to="/"> 
+                  <button class="button button2"> POČETNA </button>
                 </NavLink>
               </div>
             </form>
+          </div>
         )
     }
 }

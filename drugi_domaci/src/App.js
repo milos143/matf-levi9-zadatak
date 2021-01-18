@@ -7,9 +7,13 @@ export default class MainPage extends Component{
     render() {
         return (
             <div className="link">
-                <h3> <Link to="/admin/proizvodi">SVE KNJIGE</Link> </h3>
-                
-                <h3> <Link to="/admin/unos-novog-proizvoda">UNESI NOVU KNJIGU</Link> </h3>
+
+                <h1> Online Bookstore - Levi9 </h1>
+
+                <Link to="/admin/unos-novog-proizvoda"> <button class="button button2">UNESI NOVU KNJIGU </button> </Link>
+                <br></br>
+                <br></br>
+                <Link to="/admin/proizvodi"> <button class="button button2"> SVE KNJIGE </button> </Link>
             </div>
         )
     }

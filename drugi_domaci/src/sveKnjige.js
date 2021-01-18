@@ -9,10 +9,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper/';
 import Button from '@material-ui/core/Button';
 
-//dodati css
-//import './sveKnjige.css';
+import './sveKnjige.css';
 
-export default class sviProizvodi extends Component {
+export default class sveKnjige extends Component {
   
   constructor(props) {
 
@@ -84,8 +83,8 @@ export default class sviProizvodi extends Component {
     return (
       <div>   
         <div className="link">
-        <NavLink
-            to="/"> POČETNA
+        <NavLink to="/"> 
+          <button class="button button2"> POČETNA </button>
         </NavLink>
         </div>
         <hr>
@@ -93,14 +92,12 @@ export default class sviProizvodi extends Component {
         <TableContainer component={Paper}>
           <Table classtitle={'table'}>
             <TableHead>
-
                 <TableRow>
-                <TableCell >Red.br.</TableCell>
-                <TableCell >Naslov</TableCell>
-                <TableCell >Autor</TableCell>
-                <TableCell >BRISANJE</TableCell>
-                </TableRow>
-            
+                  <TableCell >Red. br.</TableCell>
+                  <TableCell >Naslov</TableCell>
+                  <TableCell >Autor</TableCell>
+                  <TableCell >BRISANJE</TableCell>
+                  </TableRow>
             </TableHead>
 
             <TableBody>
@@ -114,11 +111,10 @@ export default class sviProizvodi extends Component {
                   
                   <TableCell >{red.author}</TableCell>
                   
-                  <TableCell >
-                  <Button  color="primary" onClick={()=>this.deleteBooks(red.id)}>OBRIŠI OVU KNJIGU</Button>
+                  <TableCell>
+                    <Button  color="primary" onClick={()=>this.deleteBooks(red.id)}>OBRIŠI OVU KNJIGU</Button>
                   </TableCell>
-
-            </TableRow>
+              </TableRow>
               ))}
 
             </TableBody>
